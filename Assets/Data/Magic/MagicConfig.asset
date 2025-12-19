@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97b925c104bdb7847ae2714742ad8ad6, type: 3}
+  m_Name: MagicConfig
+  m_EditorClassIdentifier: Assembly-CSharp::MagicConfig
+  m_elementsData: {fileID: 11400000, guid: 6108abfe4f4b17a47a1ed775420e27b3, type: 2}
+  m_spellsDataBase: {fileID: 11400000, guid: 5d9f58d508fd0b748a98c20e9d78c76c, type: 2}
+  m_maxelements: 3
+  m_cancelCooldown: 1.5
