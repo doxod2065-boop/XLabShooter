@@ -43,13 +43,14 @@ namespace Magic.Spells.Projectiles
             }
             else
             {
-                SetLinearVelocity;
+                SetLinearVelocity();
             }
         }
 
         private void OnTriggerEnter(Collider other)
         {
             if (!m_initialized) return;
+            if (other.GetComponent<PlayerController>()) return;
 
             if (other.TryGetComponent<IEffectable>(out var effectable))
                 ApplyEffects(effectable);
@@ -75,7 +76,7 @@ namespace Magic.Spells.Projectiles
 
             m_initialized = true;
 
-            SetLinearVelocity;
+            SetLinearVelocity();
         }
 
         private void ApplyEffects(IEffectable target)
