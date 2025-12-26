@@ -85,5 +85,7 @@ namespace Magic.Systems
             spellAOE.Initialize(worldPosition, AOESpell.radius, AOEspell.effects);
         }
 
+        private void SetLayer(GameObject visualEffect) =>
+            visualEffect.layer = m_casterTransform.gameObject.layer;
     }
 }

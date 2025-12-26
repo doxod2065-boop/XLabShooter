@@ -79,7 +79,7 @@ namespace Magic.Spells.Projectiles
             SetLinearVelocity();
         }
 
-        private void ApplyEffects(IEffectable target)
+        private void ApplyEffects(IReadOnlyCollection<IEffectable> effetables)
         {
             if (m_effects is null) return;
 
@@ -91,6 +91,22 @@ namespace Magic.Spells.Projectiles
 
         private void SetLinearVelocity() =>
             m_rigidbody.linearVelocity = m_direction * m_speed;
+    
+        public static class EffectsExtension
+        {
+            public static void ApplyEffects(this IReadOnlyCollection<IEffect> effects, IReadOnlyCollection<IEffectale> effectables)
+            {
+                if (effects is null) return;
+
+                foreach (var effect in effects)
+                {
+                    foreach (var effectable in effactables)
+                    {
+                        effect?.Apply(effectable);
+                    }
+                }
+            }
+        }
     }
 }
 
