@@ -8,6 +8,7 @@ public class Enemy : MonoBehaviour
 
     [SerializeField] private AttackEnemySystem m_attack;
     [SerializeField] private HealthComponent m_health;
+    [SerializeField] private EnemyMovement m_movement;
 
     private EnemyData m_data;
 
@@ -32,7 +33,7 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
-        if(m_stateMachine.currentState.Dead || !m_data)
+        if(m_stateMachine.currentState is Enemy.State = Dead || !m_data)
         {
             return;
         }
@@ -48,6 +49,11 @@ public class Enemy : MonoBehaviour
 
         m_playerTransform = playerTransform;
         m_stateMachine ??= new EnemyStateMachine();
+
+        if (data.enemyType == AttackEnemyType.Melee)
+        {
+            m_stateMachine.ChangeStage(EnemyStage.Move);
+        }
     }
 
     private void UpdateState()
@@ -77,4 +83,31 @@ public class Enemy : MonoBehaviour
 
     }
 
+    private void HandleMoveState (bool isInAttackRange)
+    {
+
+    }
+
+    private void HandleAttackState (bool isInAttackRange)
+    {
+        m_attack.TryAttack();
+    }
+
+    private void HandleIdleState(bool isInAttackRange)
+    {
+
+    }
+
+    private void OnStateChanged(EnemyStateMachine previousState, EnemyState nextState)
+    {
+        if (previousState is EnemyState.Move)
+        {
+            m_movement.StopMoving();
+        }
+
+        if (nextState is EnemyState.Move)
+        {
+            m_movement.StartMoving();
+        }
+    }
 }

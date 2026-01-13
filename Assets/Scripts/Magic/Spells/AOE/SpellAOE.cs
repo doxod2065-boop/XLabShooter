@@ -11,13 +11,8 @@ namespace Magic.Spells.AOE
 
             foreach (var collider in colliders)
             {
-                if (collider.TryGetComponent<IEffectable>(out var effectable))
-                {
-                    foreach (var effect in effects)
-                    {
-                        effect.Apply(effectable);
-                    }
-                }
+                var effectables = collider.GetComponents<>(IEffectable);
+                effects.ApplyEffects((effectable));
             }
         }
     }

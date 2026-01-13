@@ -10,6 +10,7 @@ public sealed class AttackEnemySystem : MonoBehaviour
 
     private float m_attackTime;
     private float m_cooldownTimer;
+
     private bool m_isInitialized;
 
     public void Initialized(BaseSpellData spell, float attackTime, Transform target)
