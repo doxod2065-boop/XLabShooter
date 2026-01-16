@@ -5,11 +5,13 @@ using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
 using Inputs;
 using Magic.Systems;
+using Entities;
 
 [RequireComponent(typeof(PlayerMovement))]
 
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField] private HealthComponent m_health;
     [SerializeField] private PlayerConfig m_config;
     [SerializeField] private PlayerMovement m_playerMovement;
     [SerializeField] private MouseResolver m_mouseResolver;
@@ -34,6 +36,7 @@ public class PlayerController : MonoBehaviour
     {
         var camera = Camera.main;
 
+        m_health.Initialized(m_config);
         m_playerMovement.Initialize(m_config.speed, m_config.angularSpeed);
         m_playerRotationCalculator = new PlayerRotationCalculator(camera, transform);
 
