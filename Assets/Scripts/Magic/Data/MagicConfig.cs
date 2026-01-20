@@ -1,20 +1,19 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "MagicConfig", menuName = "XLabGame/Magic/Data/MagicConfig")]
-public class MagicConfig : ScriptableObject
+[CreateAssetMenu(fileName = "MagicConfig", menuName = "Xlab/Data/MagicConfig")]
+public sealed class MagicConfig : ScriptableObject
 {
-    [SerializeField] private ElementsData m_elementsData;
-    [SerializeField] private SpellDatabase m_spellsDataBase;
 
-    [SerializeField][Min(1)] private int m_maxelements = 3;
-    [SerializeField][Min(0)] private float m_cancelCooldown;
+    [SerializeField] private ElementData m_elementsData;
+    [SerializeField] private SpellDatabase m_spellsDateBase;
 
-    public ElementsData ElementData => m_elementsData;
+    [SerializeField][Min(1)] private int m_maxElements = 3;
+    [SerializeField][Min(0)] private float m_cancelCooldown = 0.3f;
 
-    public SpellDatabase SpellDataBase => m_spellsDataBase;
+    public ElementData ElementData => m_elementsData;
+    public SpellDatabase SpellDatabase => m_spellsDateBase;
+    public int maxElements => m_maxElements;
 
-    public int MaxElements => m_maxelements;
-
-    public float CancelCooldown => m_cancelCooldown;
-
+    public float cancelColdown => m_cancelCooldown;
+    
 }

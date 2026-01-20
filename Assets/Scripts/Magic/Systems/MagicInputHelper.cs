@@ -2,21 +2,20 @@ using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace Magic.Systems
-{
+
     [Serializable]
     public sealed class MagicInputHelper
     {
         [SerializeField] private MagicSystem m_magicSystem;
-
+        
         [Header("Key Bindings")]
         [SerializeField] private Key m_element1Key = Key.Q;
         [SerializeField] private Key m_element2Key = Key.W;
         [SerializeField] private Key m_element3Key = Key.E;
         [SerializeField] private Key m_element4Key = Key.R;
-
+        
         private bool m_isInitialized;
-
+        
         private Mouse m_mouse;
         private Keyboard m_keyboard;
 
@@ -26,7 +25,7 @@ namespace Magic.Systems
             {
                 Initialize();
             }
-
+            
             if (m_keyboard[m_element1Key].wasPressedThisFrame)
             {
                 m_magicSystem.AddElement(ElementType.Element1);
@@ -43,7 +42,7 @@ namespace Magic.Systems
             {
                 m_magicSystem.AddElement(ElementType.Element4);
             }
-
+            
             if (m_mouse.leftButton.wasPressedThisFrame)
             {
                 m_magicSystem.TryCastSpell();
@@ -58,4 +57,4 @@ namespace Magic.Systems
             m_isInitialized = true;
         }
     }
-}
+

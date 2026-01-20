@@ -1,10 +1,8 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-namespace Magic.Spells.AOE
+public interface ISpellAoe
 {
-    public interface ISpellAOE
-    {
-        public void Initialize(Vector3 worldPosition, float radius, IReadOnlyCollection<IEffect> effects);
-    }
+    public void Initialize(Vector3 worldposition, float radius, IReadOnlyCollection<IEffect> effects);
+    
 }

@@ -3,25 +3,27 @@ using UnityEngine;
 public class FixedRotation : MonoBehaviour
 {
     private Transform m_parent;
+    private Vector3 m_worldoffset;
     private Quaternion m_rotation;
-    private Vector3 m_worldOffset;
 
-    private void Start()
+    void Start()
     {
         m_parent = transform.parent;
 
         m_rotation = transform.rotation;
-        m_worldOffset = transform.position - m_parent.position;
+        m_worldoffset =transform.position - m_parent.position;
     }
 
-    private void LateUpdate()
-    {
-            if (!m_parent)
-            {
-                return;
-            }
 
-        transform.position = m_parent.position + m_worldOffset;
+    void LateUpdate()
+    {
+        if(!m_parent)
+        {
+
+            return;
+        }
+
+        transform.position = m_parent.position + m_worldoffset;
         transform.rotation = m_rotation;
     }
 }

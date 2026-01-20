@@ -18,12 +18,15 @@ public abstract class BaseSpellData : ScriptableObject
     public GameObject visualEffect => m_visualEffect;
 
     public IReadOnlyList<ElementType> combination => m_combination;
+    public IReadOnlyList<IEffect> effects => m_effects;
 
     private void OnValidate()
     {
-        if (m_combination?.Length > 3)
+        if(m_combination?.Length > 3)
         {
             m_combination = m_combination.Take(3).ToArray();
         }
     }
+
+
 }

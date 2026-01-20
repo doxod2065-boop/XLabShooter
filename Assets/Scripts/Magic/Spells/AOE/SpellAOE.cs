@@ -1,18 +1,20 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-namespace Magic.Spells.AOE
+public sealed class SpellAoe : MonoBehaviour, ISpellAoe
 {
-    public class SpellAOE : MonoBehaviour
+     public void Initialize(Vector3 targetPosition, float radius, IReadOnlyCollection<IEffect> effects)
     {
-        public void Initialized(Vector3 targetPosition, float radius, IReadOnlyCollection<IEffect> effects)
-        {
-            var colliders = Physics.OverlapSphere(targetPosition, radius);
+        var colliders = Physics.OverlapSphere(targetPosition, radius);
 
-            foreach (var collider in colliders)
+        foreach(var collider in colliders )
+        {
+            if(collider.TryGetComponent<IEffectable>(out var effectable))
             {
-                var effectables = collider.GetComponents<>(IEffectable);
-                effects.ApplyEffects((effectable));
+                foreach(var effect in effects)
+                {
+                    effect.Apply(effectable);
+                }
             }
         }
     }

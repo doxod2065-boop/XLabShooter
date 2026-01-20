@@ -19,7 +19,7 @@ public class SpellPreparation
 
     public void AddElement(ElementType elementType)
     {
-        if (m_elements.Count >= m_magicConfig.MaxElements)
+        if (m_elements.Count >= m_magicConfig.maxElements)
         {
 
             Clear();
@@ -32,19 +32,19 @@ public class SpellPreparation
             ElementsChanged?.Invoke(m_elements);
 
         }
-
+        
     }
 
-    public bool TrygetSpell(out BaseSpellData spell)
+    public bool TryGetSpell(out BaseSpellData spell)
     {
         spell = null;
 
-        if (m_elements.Count is 0)
+        if(m_elements.Count is 0)
         {
             return false;
         }
 
-        foreach (var spellData in m_magicConfig.SpellDataBase.Spells)
+        foreach (var spellData in m_magicConfig.SpellDatabase.Spells)
         {
 
             if (IsMatchingCombination(spellData.combination))

@@ -1,6 +1,5 @@
 using System;
 using UnityEngine;
-using static IEffect;
 
 [Serializable]
 public class AttackEffect : IEffect
@@ -9,9 +8,10 @@ public class AttackEffect : IEffect
 
     public void Apply(IEffectable effectable)
     {
-        if (effectable is IHealth health)
+        if(effectable is IHealth health)
         {
             health.TakeDamage(m_damage);
         }
+
     }
 }
