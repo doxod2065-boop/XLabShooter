@@ -9,9 +9,9 @@ public abstract class TimedBuff : BaseBuff
 
     [NonSerialized] private float m_timer;
 
-    protected float 
+    protected float duration => m_duration;
 
-    protected TimedBuff(string id, float duration)
+    protected TimedBuff() { }
     protected override void OnDeinitializing() =>
         m_timer = 0;
 

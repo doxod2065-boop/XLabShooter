@@ -15,6 +15,7 @@ namespace Players
         private float m_speed;
         private float m_angularSpeed;
         private bool m_hasDestination;
+        private float m_accseleration;
         
         private void OnValidate()
         {
@@ -56,13 +57,35 @@ namespace Players
 
             m_agent.updateRotation = false;
         }
-        
+
+        public void IncreaseAccseleration(float delta)
+        {
+            if (delta < 0)
+            {
+                throw new ArgumentException("Delta cannot be negative", nameof(delta));
+            }
+
+            m_accseleration += delta;
+        }
+
+        public void DecreaseAccseleration(float delta)
+        {
+            if (delta < 0)
+            {
+                throw new ArgumentException("Delta cannot be negative", nameof(delta));
+            }
+
+            m_accseleration -= delta;
+            SetSpeed();
+        }
+
         public void SetDestination(Vector3 navMeshPoint)
         {
             m_agent.SetDestination(navMeshPoint);
             m_hasDestination = true;
             
             DestinationChanged?.Invoke(navMeshPoint);
+            SetSpeed();
         }
 
         public void RotateTowarrds(Vector3 worldPoint)
@@ -77,6 +100,15 @@ namespace Players
             var targetRotate = Quaternion.LookRotation(direction, Vector3.up);
             transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotate, m_agent.angularSpeed * Time.deltaTime);
 
+        }
+
+        private void SetSpeed()
+        {
+            var acceleration = m_accseleration > 0
+                ? m_accseleration
+                : 1;
+
+            m_agent.speed = m_speed * m_accseleration;
         }
     }
 }
