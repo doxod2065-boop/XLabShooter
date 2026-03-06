@@ -25,6 +25,6 @@ public class MainMenuViev : MonoBehaviour
 
     private void OnPlayClick()
     {
-        SceneManager.LoadScene()
+        m_loading.LoadScene(GlobalConstants.Scence)
     }
 }
