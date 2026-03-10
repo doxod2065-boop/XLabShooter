@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class BootstrapGameplay : MonoBehaviour
+public class Bootstrap : MonoBehaviour
 {
     [SerializeField] private DeadMenuViev m_deadMenuViev;
     [SerializeField] private SpawnerEnemy m_enemySpawner;
