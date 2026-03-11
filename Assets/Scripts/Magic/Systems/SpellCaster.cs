@@ -1,83 +1,103 @@
 using System;
 using UnityEngine;
-using Object = UnityEngine.Object;
-
-
+using UnityEngine.Pool;
 
 public sealed class SpellCaster
 {
     private readonly Transform m_casterTransform;
+    private ObjectPool<GameObject> m_visualEffectPool;
 
-    public SpellCaster(Transform casterTransform)
+    private readonly bool m_isSingelSpell;
+
+    public SpellCaster(Transform casterTransformer, bool isSingelSpell = false)
     {
-        m_casterTransform = casterTransform;
+        m_casterTransform = casterTransformer;
+        m_isSingelSpell = isSingelSpell;
     }
-    public void Cast(BaseSpellData spell, Vector3 worldPosition)
+
+    public void Cast(BaceSpellData spell, Vector3 worldPosition)
     {
         if(!spell)
-            {
-                return;
-            }
+        {
+            return;
+        }
+
         switch(spell)
         {
-            case SelfSpellData selfSpell:CastSelf(selfSpell); break;
-            case TargetSpellData targetSpell: CastTarget(targetSpell, worldPosition); break;
-            case NonTargetSpellData nonTargetSpell: CastNonTarget(nonTargetSpell); break;
-            case AoeSpellData aoeSpell:
+            case SelfSpellData selfSpell: CastSelf(selfSpell); break;
+            case TargetSpellData selfSpell: CastTarget(selfSpell, worldPosition); break;
+            case NonTargetSpellData selfSpell: CastNonTarget(selfSpell); break;
+            case AoeSpellData selfSpell:
                 {
-                    CastAOE(aoeSpell, aoeSpell.isTarget
+                    CastAoe(selfSpell, selfSpell.isTarget
                         ? worldPosition
                         : m_casterTransform.position);
-                    break;
                 }
+                break;
         }
     }
 
-    private void CastSelf(SelfSpellData selfSpell)
+    private void CastSelf(SelfSpellData spell) 
     {
-        if(selfSpell.visualEffect)
+        if (spell.visualEffect)
         {
-            Object.Instantiate(selfSpell.visualEffect, m_casterTransform.position, Quaternion.identity);
+            var visualEffect = UnityEngine.Object.Instantiate(spell.visualEffect, m_casterTransform.position, Quaternion.identity);
+            SetLayer(visualEffect);
         }
 
-        if(m_casterTransform.TryGetComponent<IEffectable>(out var effectable))
-        {
-            foreach(var effect in selfSpell.effects)
-            {
-                effect.Apply(effectable);
-            }
-    
-        }
+        var effectable = m_casterTransform.GetComponent<IEffectable>();
+        spell.effects.ApplyEffect(effectable);
     }
-    private void CastTarget(TargetSpellData targetSpell, Vector3 worldPosition)
+
+    private void CastTarget(TargetSpellData spell, Vector3 worldPosition)
     {
-        if(!targetSpell.visualEffect)
+        if (!spell.visualEffect)
         {
             throw new NullReferenceException("Target spell must have visualEffect");
         }
 
-        var projectile = Object.Instantiate(targetSpell.visualEffect, m_casterTransform.position, Quaternion.identity);
-        
-        var SpellProjectile =
-        projectile.GetComponent<ISpellProjectile>() ??
-        projectile.AddComponent<SpellProjectile>();
+        var projectile = UnityEngine.Object.Instantiate(spell.visualEffect, m_casterTransform.position, Quaternion.identity);
+        SetLayer(projectile);
 
-        SpellProjectile.Initialize(worldPosition, targetSpell.speed, targetSpell.effects);
+        var spellProjectile =
+            projectile.GetComponent<ISpellProjectile>() ??
+            projectile.AddComponent<SpellProjectile>();
+
+        spellProjectile.Initialize(worldPosition, spell.speed, spell.effects);
     }
-    private void CastNonTarget(NonTargetSpellData spell) { }
-    private void CastAOE(AoeSpellData aoeSpell, Vector3 worldPosition)
-    {
-        var aoe = aoeSpell.visualEffect
-        ? Object.Instantiate(aoeSpell.visualEffect, m_casterTransform.position, Quaternion.identity)
-        : new GameObject();
 
+    private void CastNonTarget(NonTargetSpellData selfSpell) { }
+
+    private void CastAoe(AoeSpellData spell, Vector3 worldPosition) 
+    {
+        GameObject aoe = null;
+
+        if(m_isSingelSpell)
+        {
+            m_visualEffectPool ??= new ObjectPool<GameObject>(
+                () => Create(),
+                gm => gm.SetActive(true),
+                gm => gm.SetActive(false),
+                UnityEngine.Object.Destroy);
+        }
+        else
+        {
+            aoe = Create();
+        }
+
+        SetLayer(aoe);
         aoe.transform.position = worldPosition;
 
-        var SpellAoe =
+        var spellAoe =
             aoe.GetComponent<ISpellAoe>() ??
             aoe.AddComponent<SpellAoe>();
 
-            SpellAoe.Initialize(worldPosition, aoeSpell.radius, aoeSpell.effects);
+        spellAoe.Initialize(worldPosition, spell.radius, spell.effects);
+
+        GameObject Create() =>
+            UnityEngine.Object.Instantiate(spell.visualEffect, m_casterTransform.position, Quaternion.identity);
     }
 
+    private void SetLayer(GameObject visualEffect) =>
+        visualEffect.layer = m_casterTransform.gameObject.layer;
 }

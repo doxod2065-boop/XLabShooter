@@ -1,14 +1,16 @@
+﻿using System;
 using UnityEngine;
 
-[SerializeField]
-public sealed class HealEffect : IEffect
+[Serializable]
+public class HealEffect : IEffect
 {
-    [SerializeField][Min(0)] private float m_heal;
+    [SerializeField] private float m_health;
+
     public void Apply(IEffectable effectable)
     {
         if(effectable is IHealth health)
         {
-            health.Hael(m_heal);
+            
         }
     }
 }

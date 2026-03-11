@@ -5,8 +5,8 @@ namespace Cameras
     public class CameraFollow : MonoBehaviour
     {
         [SerializeField] private Transform m_target;
-        [SerializeField] private Vector3 m_offset = new(0,15,-10);
-        [SerializeField][Range(0.001f, 1f)] private float m_smootTime = 0.15f;
+        [SerializeField] private Vector3 m_offcet = new(0, 15, -10);
+        [SerializeField][Range(0, 1)] private float m_smoothTime = 0.5f;
 
         private Vector3 m_velocity;
 
@@ -17,13 +17,11 @@ namespace Cameras
                 return;
             }
 
-            var targetPosition = m_target.position + m_offset;
-            transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref m_velocity, m_smootTime);
-
-
+            var targetPosition = m_target.position + m_offcet;
+            transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref m_velocity, m_smoothTime);
         }
 
-        public void SetTarget(Transform target) =>  
+        public void SetTarget(Transform target) =>
             m_target = target;
     }
 }

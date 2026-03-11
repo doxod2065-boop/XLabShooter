@@ -1,7 +1,7 @@
- public enum MagicState
-    {
-        Idle,
-        Preparation,
-        Coldown,
-        Casting
-    }
+﻿public enum MagicState
+{
+    Idle,
+    Preporation,
+    Cooldown,
+    Casting
+}

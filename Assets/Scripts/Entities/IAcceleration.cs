@@ -1,11 +1,5 @@
-using UnityEngine;
-
-namespace Entities
+public interface IAcceleration
 {
-    public interface IAcceleration
-    {
-        public void IncreaseAccseleration(float delta);
-
-        public void DecreaseAccseleration(float delta);
-    }
+    public void IncreaseAcceleration(float delta);
+    public void DecreaseAcceleration(float delta);
 }

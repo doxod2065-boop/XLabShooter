@@ -4,7 +4,7 @@ using UnityEngine;
 [Serializable]
 public class AttackEffect : IEffect
 {
-    [SerializeField][Min(0)] private float m_damage;
+    [SerializeField][Min(0)]  private float m_damage;
 
     public void Apply(IEffectable effectable)
     {
@@ -12,6 +12,5 @@ public class AttackEffect : IEffect
         {
             health.TakeDamage(m_damage);
         }
-
     }
 }
