@@ -2,21 +2,25 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Assets._Scripts.UI
+namespace UI
 {
     public class DeadMenuView : MonoBehaviour
     {
-        public event Action goToMenuClicked;
+        public event Action GoToMenuClicked;
 
-        [SerializeField] private Button m_mainMenuButton;
+        [SerializeField] private Button m_goToMainMenuButton;
 
-        private void OnEnable() =>
-            m_mainMenuButton.onClick.AddListener(OnCklicked);
+        private void OnEnable()
+        {
+            m_goToMainMenuButton.onClick.AddListener(OnClicked);
+        }
 
-        private void OnDisable() =>
-             m_mainMenuButton.onClick.RemoveListener(OnCklicked);
+        private void OnDisable()
+        {
+            m_goToMainMenuButton.onClick.AddListener(OnClicked);
+        }
 
-        public void OnCklicked() =>
-            goToMenuClicked?.Invoke();
+        private void OnClicked() =>
+            GoToMenuClicked?.Invoke();
     }
 }

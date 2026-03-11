@@ -1,3 +1,6 @@
+using Entities;
+using Infrastructure;
+using Magic.Systems;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -7,23 +10,24 @@ namespace Players
     public class PlayerController : MonoBehaviour
     {
         [SerializeField] private HealthComponent m_health;
-
-        [SerializeField] private PlayerMovement m_movement;
-        [SerializeField] private Transform m_targetPositon;
         [SerializeField] private PlayerConfig m_config;
-        [SerializeField] private MagicInputHandler m_input;
+        [SerializeField] private PlayerMovement m_playerMovement;
+
+        [SerializeField] private MagicInputHelper m_magicInputHelper;
+
+        private MouseResolver m_mouseResolver;
+
+        private PlayerRotationCalculator m_playerRotationCalculator;
 
         public PlayerConfig config => m_config;
-        public HealthComponent healh => m_health;
 
-        private PlayerRotationCulculator m_playerRotationCulculator;
-        private MouseResolver m_mouseResolver;
+        public HealthComponent health => m_health;
 
         private void OnValidate()
         {
-            if (!m_movement)
+            if (!m_playerMovement)
             {
-                m_movement = GetComponent<PlayerMovement>();
+                m_playerMovement = GetComponent<PlayerMovement>();
             }
         }
 
@@ -33,9 +37,11 @@ namespace Players
         {
             m_mouseResolver = mouseResolver;
 
-            m_movement.Initialize(m_config.speed, m_config.m_angularSpeed);
-            m_playerRotationCulculator = new PlayerRotationCulculator(camera, transform);
-            m_health.Initialize(m_config.health);
+            m_mouseResolver = ServiceLocator.Resolve<MouseResolver>();
+
+            m_health.Initialize(m_config.hp);
+            m_playerMovement.Initialize(m_config.speed, m_config.angularSpeed);
+            m_playerRotationCalculator = new PlayerRotationCalculator(camera, transform);
 
             SetupCursor();
         }
@@ -43,29 +49,30 @@ namespace Players
         private void Update()
         {
             Vector3 mousePosition = Mouse.current.position.ReadValue();
-            var loockPoint = m_playerRotationCulculator.Calculate(mousePosition);
-            m_movement.RotateTowards(loockPoint);
+            var lookPoint = m_playerRotationCalculator.Calculate(mousePosition);
+            m_playerMovement.RotateTowards(lookPoint);
 
             if (Mouse.current.rightButton.wasPressedThisFrame)
             {
-                Vector3? navPoint = m_mouseResolver.GetNavMeshPoint(mousePosition);
+                Vector3? navPoint = m_mouseResolver.GetNavMeshPoint();
 
-                if(navPoint.HasValue)
+                if (navPoint.HasValue)
                 {
-                    m_movement.SetDestination(navPoint.Value);
+                    m_playerMovement.SetDestination(navPoint.Value);
                 }
             }
 
-            m_input.Update();
+            m_magicInputHelper.Update();
         }
 
         private void SetupCursor()
         {
-            var textures = m_config.cursoreTexture;
-            var hospot = new Vector2(textures.width / 2f, textures.height / 2f);
-            if(textures is not null)
+            var texture = m_config.cursorTexture;
+
+            if (texture)
             {
-                Cursor.SetCursor(textures, hospot, CursorMode.Auto);
+                var hotspot = new Vector2(texture.width / 2f, texture.height / 2f);
+                Cursor.SetCursor(texture, hotspot, CursorMode.Auto);
             }
         }
     }

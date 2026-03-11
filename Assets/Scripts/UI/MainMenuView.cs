@@ -1,44 +1,47 @@
-﻿using System;
+using Infrastructure;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Assets._Scripts.UI
+namespace UI
 {
     public class MainMenuView : MonoBehaviour
     {
-        public event Action playClicked;
-        public event Action exitClicked;
+        [SerializeField] private Button m_playButton;
+        [SerializeField] private Button m_exitButton;
 
         private Loading m_loading;
-        [SerializeField] private Button m_playerButton;
-        [SerializeField] private Button m_exitButton;
+
+        private void Start()
+        {
+            m_loading = ServiceLocator.Resolve<Loading>();
+        }
 
         private void OnEnable()
         {
-            m_playerButton.onClick.AddListener(OnPlayerClicked);
-            m_exitButton.onClick.AddListener(OnExitClicked);
+            m_playButton.onClick.AddListener(OnPlayClick);
+            m_exitButton.onClick.AddListener(OnExitClick);
         }
 
         private void OnDisable()
         {
-            m_playerButton.onClick.RemoveListener(OnPlayerClicked);
-            m_exitButton.onClick.RemoveListener(OnExitClicked);
+            m_playButton.onClick.RemoveListener(OnPlayClick);
+            m_exitButton.onClick.RemoveListener(OnExitClick);
         }
 
-        private void Start()
+        private void OnPlayClick()
         {
-            m_loading = ServiceLocator.Resolved<Loading>();
-        }
-
-        private void OnPlayerClicked()
-        {
-            playClicked?.Invoke();
+            gameObject.SetActive(false);
             m_loading.LoadScene(GlobalConstants.Scenes.Game);
         }
-   
-        private void OnExitClicked()
+
+        private void OnExitClick()
         {
             Application.Quit();
+#if UNITY_EDITOR
+            UnityEditor.EditorApplication.ExitPlaymode();
+#endif
+            Application.Quit();
+
         }
     }
 }

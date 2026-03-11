@@ -1,13 +1,25 @@
-﻿using UnityEngine;
+using UnityEngine;
 
 namespace Players
 {
     [CreateAssetMenu(fileName = "PlayerConfig", menuName = "Player Config")]
     public sealed class PlayerConfig : ScriptableObject
     {
-        [field: SerializeField] [Min(0)] public int health { get; set; } = 500;
-        [field: SerializeField] [Range(0,100)] public float speed { get; private set; } = 5;
-        [field: SerializeField] public Texture2D cursoreTexture { get; private set; }
-        [field: SerializeField] [Min(0)] public float m_angularSpeed { get; private set; } = 500f;
+        [SerializeField] private Texture2D m_cursorTexture;
+
+        [SerializeField] [Min(0)] private int m_hp = 500;
+
+        [Header("Speed")]
+        [SerializeField] [Range(0f, 100f)] private float m_speed = 5f;
+        [SerializeField] [Min(0)] private float m_angularSpeed = 500f;
+
+        public float speed => m_speed;
+
+        public int hp => m_hp;
+
+        public float angularSpeed => m_angularSpeed;
+
+        public Texture2D cursorTexture => m_cursorTexture;
     }
 }
+

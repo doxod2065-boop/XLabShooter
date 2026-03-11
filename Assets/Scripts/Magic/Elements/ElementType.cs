@@ -1,7 +1,10 @@
-public enum ElementType
+namespace Magic.Elements
 {
-    Element1, 
-    Element2,
-    Element3, 
-    Element4   
+    public enum ElementType
+    {
+        Element1,
+        Element2,
+        Element3,
+        Element4,
+    }
 }

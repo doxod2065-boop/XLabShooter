@@ -1,34 +1,40 @@
-using DG.Tweening;
 using UnityEngine;
+using DG.Tweening;
 
-public sealed class TargetMarker : MonoBehaviour
+namespace Markers
 {
-    [Header("Parameters")]
-    [SerializeField][Min(0)] private float m_startSize = 0.25f;
-    [SerializeField][Min(0)] private float m_finishSize = 0.5f;
-    [SerializeField][Min(0.0001f)] private float m_duration = 0.5f;
-    [SerializeField] private Ease m_ease = Ease.InOutSine;
-
-    private Tweener _tween;
-
-    public void Show(Vector3 worldPosition)
+    public sealed class TargetMarker : MonoBehaviour
     {
-        _tween?.Kill();
-        gameObject.SetActive(true);
-        transform.position = worldPosition;
-        transform.localScale = Vector3.one * m_startSize;
+        [Header("Parameters")]
+        [SerializeField][Min(0)] private float m_startSize = 0.25f;
+        [SerializeField][Min(0)] private float m_finishSize = 0.5f;
+        [SerializeField][Min(0.0001f)] private float m_duration = 0.5f;
 
-        _tween = transform
-            .DOScale(Vector3.one * m_finishSize, m_duration)
-            .SetEase(m_ease)
-            .SetLoops(-1, LoopType.Yoyo);
-    }
+        [SerializeField] private Ease m_ease = Ease.InOutSine;
 
-    public void Hide()
-    {
-        _tween?.Kill();
-        _tween = null;
+        private Tweener m_tween;
 
-        gameObject.SetActive(false);
+        public void Show(Vector3 worldPosition)
+        {
+            m_tween?.Kill();
+
+            gameObject.SetActive(true);
+
+            transform.position = worldPosition;
+
+            transform.localScale = Vector3.one * m_startSize;
+            m_tween = transform
+                .DOScale(Vector3.one * m_finishSize, m_duration)
+                .SetEase(m_ease)
+                .SetLoops(-1, LoopType.Yoyo);
+        }
+
+        public void Hide()
+        {
+            m_tween?.Kill();
+            m_tween = null;
+
+            gameObject.SetActive(false);
+        }
     }
 }

@@ -1,7 +1,11 @@
-public interface IHealth
+namespace Entities
 {
-    public float value { get; }
+    public interface IHealth
+    {
+        public float value { get; set; }
 
-    public void TakeDamage(float damage); 
-    public void Heal(float heal);
+        public void Heal(float health);
+
+        public void TakeDamage(float damage);
+    }
 }

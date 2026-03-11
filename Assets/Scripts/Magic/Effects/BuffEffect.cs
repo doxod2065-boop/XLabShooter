@@ -1,20 +1,24 @@
+﻿using Magic.Buffs;
 using System;
 using UnityEngine;
 
-[Serializable]
-public class BuffEffect : IEffect
+namespace Magic.Effects
 {
-    [SerializeReferenceDropdown]
-    [SerializeReference] private IBuff[] m_buff;
-
-    public void Apply(IEffectable effectable)
+    [Serializable]
+    public class BuffEffect : IEffect
     {
-        if (effectable is BuffContainer container)
+        [SerializeReferenceDropdown]
+        [SerializeReference] private IBuff[] m_buffs;
+
+        public void Apply(IEffectable effectable)
         {
-            foreach (var buff in m_buff)
+            if (effectable is BuffContainer container)
             {
-                container.Add(buff.Clone());
+                foreach (var buff in m_buffs)
+                {
+                    container.Add(buff.Clone());
+                }
             }
         }
     }
-}   
+}

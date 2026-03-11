@@ -1,5 +1,9 @@
-public interface IAcceleration
+﻿namespace Entities
 {
-    public void IncreaseAcceleration(float delta);
-    public void DecreaseAcceleration(float delta);
+    public interface IAcceleration 
+    {
+        public void IncreaseAcceleration(float delta);
+
+        public void DecreaseAcceleration(float delta);
+    }
 }

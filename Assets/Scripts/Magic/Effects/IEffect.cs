@@ -1,6 +1,7 @@
-public interface IEffect
+namespace Magic.Effects
 {
-    public void Apply(IEffectable effectable);
+    public interface IEffect
+    {
+        public void Apply(IEffectable effectable);
+    }
 }
-
-public interface IEffectable { }
