@@ -1,7 +1,7 @@
-using Magic.Effects;
-using Magic.Elements;
 using System.Collections.Generic;
 using System.Linq;
+using Magic.Effects;
+using Magic.Elements;
 using UnityEngine;
 
 namespace Magic.Spells.Data
@@ -14,11 +14,14 @@ namespace Magic.Spells.Data
 
         [SerializeReferenceDropdown]
         [SerializeReference] private IEffect[] m_effects;
-
-        public string spellName => m_spellName; 
+        
+        public string spellName => m_spellName;
+        
         public GameObject visualEffect => m_visualEffect;
-        public IReadOnlyList<ElementType> combination => m_combination;
+        
         public IReadOnlyList<IEffect> effects => m_effects;
+        
+        public IReadOnlyList<ElementType> combination => m_combination;
 
         private void OnValidate()
         {

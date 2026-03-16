@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 9d78176e3d5d34947ba548bd631ae1ea
+timeCreated: 1515079737
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Prefabs/Combat/Muzzleflash/Sci-Fi/Sniper/SniperMuzzleYellow.prefab
+  uploadId: 757035

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 8a6ce8cde9cc6f948a40a520d20e9568
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Prefabs/Interactive/Lightning/LightningStrikeRed.prefab
+  uploadId: 757035

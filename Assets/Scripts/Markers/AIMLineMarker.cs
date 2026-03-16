@@ -1,9 +1,9 @@
-﻿using Players;
+using Inputs;
 using UnityEngine;
 
 namespace Markers
 {
-    [RequireComponent (typeof(LineRenderer))]
+    [RequireComponent(typeof(LineRenderer))]
     public class AimLineMarker : MonoBehaviour
     {
         [Header("Components")]
@@ -14,9 +14,9 @@ namespace Markers
         [SerializeField] [Min(0)] private float m_zOffset = 0.5f;
         [SerializeField] [Min(0)] private float m_lineWidth = 0.1f;
         [SerializeField] [Min(0)] private float m_disableDistance = 1f;
-
+        
         private Transform m_playerTransform;
-
+        
         private void OnValidate()
         {
             if (!m_lineRenderer)
@@ -34,17 +34,17 @@ namespace Markers
 
         private void LateUpdate()
         {
-            if (m_playerTransform == null)
+            if (m_playerTransform is null)
             {
                 return;
             }
-
+            
             var playerPos = m_playerTransform.position;
             var end = GetAimPosition();
-
+            
             var direction = (end - playerPos).normalized;
             var start = playerPos + direction * m_zOffset;
-
+            
             start.y = playerPos.y;
             end.y = playerPos.y;
 
@@ -55,18 +55,18 @@ namespace Markers
 
         public void Initialize(Transform playerTransform)
         {
-            m_playerTransform = playerTransform;    
+            m_playerTransform = playerTransform;
         }
 
         private Vector3 GetAimPosition()
         {
             var worldPosition = m_mouseResolver.GetCursorWorldPosition();
-
+            
             if (worldPosition.HasValue)
             {
                 return worldPosition.Value;
             }
-
+            
             return m_playerTransform.position + m_playerTransform.forward;
         }
     }

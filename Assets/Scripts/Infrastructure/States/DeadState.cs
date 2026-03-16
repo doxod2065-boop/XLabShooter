@@ -1,9 +1,7 @@
-﻿using Infrastructure.States;
 using UI;
-using UnityEngine.InputSystem.iOS;
 using UnityEngine.SceneManagement;
 
-namespace Infrastructure
+namespace Infrastructure.States
 {
     public class DeadState : IState
     {
@@ -14,9 +12,10 @@ namespace Infrastructure
         {
             m_stateMachine = stateMachine;
             m_deadMenuView = deadMenuView;
-
+            
             deadMenuView.gameObject.SetActive(false);
         }
+
         public void Enter()
         {
             m_deadMenuView.GoToMenuClicked += OnGoToMenuClicked;
@@ -28,10 +27,10 @@ namespace Infrastructure
             m_deadMenuView.GoToMenuClicked -= OnGoToMenuClicked;
             m_deadMenuView.gameObject.SetActive(false);
         }
-
+        
         private void OnGoToMenuClicked()
         {
-            m_stateMachine.ChangeState<GameplayExitState>();
+            m_stateMachine.ChangedState<GameplayExitState>();
         }
     }
 }

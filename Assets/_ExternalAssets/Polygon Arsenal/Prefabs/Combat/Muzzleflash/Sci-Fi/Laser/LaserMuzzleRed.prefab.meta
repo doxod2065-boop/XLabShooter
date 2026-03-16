@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 3bc23c436e8befc448204bca1e70dd04
+timeCreated: 1514691229
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Prefabs/Combat/Muzzleflash/Sci-Fi/Laser/LaserMuzzleRed.prefab
+  uploadId: 757035

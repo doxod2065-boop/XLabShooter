@@ -1,6 +1,6 @@
-﻿namespace Magic.Buffs
+namespace Magic.Buffs
 {
-    public enum BuffType 
+    public enum BuffType
     {
         Buff,
         Debuff

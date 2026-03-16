@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 26e9141c14e9325419fcd37cf085822c
+timeCreated: 1516036597
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Demo/Materials/PA_Crate01.mat
+  uploadId: 757035

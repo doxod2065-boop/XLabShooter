@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 8836f20a0489f2241bbd59be8354cf5b
+timeCreated: 1515438932
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Prefabs/Environment/Fairies/FairiesYellow.prefab
+  uploadId: 757035

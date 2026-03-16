@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: a5734abcd346b3643957bd8b8b047d04
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Prefabs/Combat/Aura/DamageAura/DamageAuraNature.prefab
+  uploadId: 757035

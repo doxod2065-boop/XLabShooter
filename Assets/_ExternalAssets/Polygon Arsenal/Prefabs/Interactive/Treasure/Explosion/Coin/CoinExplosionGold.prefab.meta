@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: fe1bae6a050d96e489cea10a227971f8
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Prefabs/Interactive/Treasure/Explosion/Coin/CoinExplosionGold.prefab
+  uploadId: 757035

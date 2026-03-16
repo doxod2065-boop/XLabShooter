@@ -1,25 +1,21 @@
-﻿using Entities.Enemies.Data;
-using Entities.Enemies.Systems;
 using System;
+using Entities.Enemies.Data;
+using Entities.Enemies.Systems;
 using UnityEngine;
 
 namespace Entities.Enemies
 {
     public class Enemy : MonoBehaviour
     {
-        public event Action<Enemy> Died;
-
-        [SerializeField] private EnemyAttack m_attack;
+        public event Action<Enemy> Died; 
+        
+        [SerializeField] private AttackEnemy m_attack;
         [SerializeField] private HealthComponent m_health;
         [SerializeField] private EnemyMovement m_movement;
-
+        
         private EnemyData m_data;
-        private EnemyStateMachine m_stateMachine;
         private Transform m_playerTransform;
-
-        // TODO Add Health
-        // TODO Add Movement
-        // TODO Add AttackComponent
+        private EnemyStateMachine m_stateMachine;
 
         private void Awake()
         {
@@ -35,7 +31,7 @@ namespace Entities.Enemies
         private void OnDisable()
         {
             m_health.Died -= OnDied;
-            m_stateMachine.StateChanged += OnStateChanged;
+            m_stateMachine.StateChanged -= OnStateChanged;
         }
 
         private void Update()
@@ -53,7 +49,7 @@ namespace Entities.Enemies
             m_data = data;
             m_health.Initialize(data.health);
             m_movement.Initialize(data.speed, playerTransform);
-            m_attack.Initialize(data.defaultSpell, data.spells, playerTransform, data.attackTime);
+            m_attack.Initialize(data.defaultSpell, data.spells, data.attackTime, playerTransform);
 
             m_playerTransform = playerTransform;
             m_stateMachine ??= new EnemyStateMachine();
@@ -75,7 +71,7 @@ namespace Entities.Enemies
                 case EnemyState.Attack: HandleAttackState(isInAttackRange); break;
             }
         }
-
+        
         private void HandleIdleState(bool isInAttackRange)
         {
             if (m_data.enemyType == AttackEnemyType.Range && isInAttackRange)
@@ -95,7 +91,7 @@ namespace Entities.Enemies
         private void HandleAttackState(bool isInAttackRange)
         {
             m_attack.TryAttack();
-
+            
             if (!isInAttackRange)
             {
                 if (m_data.enemyType == AttackEnemyType.Melee)
@@ -115,14 +111,14 @@ namespace Entities.Enemies
             {
                 return false;
             }
-
+            
             var distance = Vector3.Distance(transform.position, m_playerTransform.position);
             return distance <= m_data.attackRange;
         }
-
+        
         private void OnDied() =>
             Died?.Invoke(this);
-
+        
         private void OnStateChanged(EnemyState previousState, EnemyState nextState)
         {
             if (previousState is EnemyState.Move)

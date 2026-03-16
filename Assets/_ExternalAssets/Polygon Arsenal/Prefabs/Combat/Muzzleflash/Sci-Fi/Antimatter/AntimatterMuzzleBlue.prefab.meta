@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: a1ec6619ddcdb8f4cb5775f5a438ff66
+timeCreated: 1514926985
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Prefabs/Combat/Muzzleflash/Sci-Fi/Antimatter/AntimatterMuzzleBlue.prefab
+  uploadId: 757035

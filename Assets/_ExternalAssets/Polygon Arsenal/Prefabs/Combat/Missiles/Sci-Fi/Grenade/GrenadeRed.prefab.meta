@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 640d2e0a412720b48ad0ea8d77b11faa
+timeCreated: 1515083586
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Prefabs/Combat/Missiles/Sci-Fi/Grenade/GrenadeRed.prefab
+  uploadId: 757035

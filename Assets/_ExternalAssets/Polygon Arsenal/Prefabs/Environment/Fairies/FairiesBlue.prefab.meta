@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 60dd51cefb4caac43b69f18409d0dab7
+timeCreated: 1515438936
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Prefabs/Environment/Fairies/FairiesBlue.prefab
+  uploadId: 757035

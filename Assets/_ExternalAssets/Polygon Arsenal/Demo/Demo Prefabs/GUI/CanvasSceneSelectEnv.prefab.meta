@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: c94d87eef7b7f7343b3883b8bcd9ee85
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Demo/Demo Prefabs/GUI/CanvasSceneSelectEnv.prefab
+  uploadId: 757035

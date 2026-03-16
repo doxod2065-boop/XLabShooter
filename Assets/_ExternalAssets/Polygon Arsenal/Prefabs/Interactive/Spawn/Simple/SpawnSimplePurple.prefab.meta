@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 84f872464fe640744962b1220fcb3657
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Prefabs/Interactive/Spawn/Simple/SpawnSimplePurple.prefab
+  uploadId: 757035

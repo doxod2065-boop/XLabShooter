@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 65cfa0467378c174abf748d4e7f86ddc
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Prefabs/Combat/Curses & Debuffs/Curse/HealCurse.prefab
+  uploadId: 757035

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: a2448e168582ff24c8a592c5e00e698b
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Prefabs/Combat/Explosions/Standard/MinigunExplosionStandard.prefab
+  uploadId: 757035

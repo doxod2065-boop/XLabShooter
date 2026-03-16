@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 7790ac17f2982ec4f8681db711c0f81b
+timeCreated: 1515508338
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Prefabs/Environment/Smoke/Steam/SteamOutlet.prefab
+  uploadId: 757035

@@ -1,4 +1,5 @@
-﻿using Players;
+using Inputs;
+using Players;
 using UnityEngine;
 
 namespace Infrastructure.States
@@ -14,23 +15,20 @@ namespace Infrastructure.States
         {
             m_stateMachine = stateMachine;
         }
-
+        
         public void Enter()
         {
             ServiceLocator.Register(m_mouseResolver);
 
-            var playerFactory = new PlayerFactory(GlobalConstants.Paths.PlayerPrefab);
+            var playerFactory = new PlayerFactory("Prefabs/Player");
+            
             ServiceLocator.Register<IPlayerFactory>(playerFactory);
             ServiceLocator.Register<IPlayerFactorySettings>(playerFactory);
-
-            ServiceLocator.Register<PlayerSpawnPoint>(m_playerSpawnPoint);
-
-            m_stateMachine.ChangeState<GameplayState>();
+            
+            ServiceLocator.Register(m_playerSpawnPoint);
+            m_stateMachine.ChangedState<GameplayEntryState>();
         }
 
-        public void Exit()
-        {
-
-        }
+        public void Exit() { }
     }
 }

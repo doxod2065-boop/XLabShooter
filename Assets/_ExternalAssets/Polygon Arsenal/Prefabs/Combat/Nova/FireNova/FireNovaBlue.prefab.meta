@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 6ae8e30257afbe5459f7d32503036ab3
+timeCreated: 1514399689
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Prefabs/Combat/Nova/FireNova/FireNovaBlue.prefab
+  uploadId: 757035

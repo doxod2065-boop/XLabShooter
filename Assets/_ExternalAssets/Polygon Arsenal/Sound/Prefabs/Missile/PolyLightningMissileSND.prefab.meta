@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: b5e17fb04629b1b42aa00171599a225e
+timeCreated: 1515542342
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Sound/Prefabs/Missile/PolyLightningMissileSND.prefab
+  uploadId: 757035

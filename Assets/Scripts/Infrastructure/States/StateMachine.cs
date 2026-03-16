@@ -11,8 +11,8 @@ namespace Infrastructure.States
         public void Initialize(params IState[] states)
         {
             if (m_states.Count > 0) return;
-
-            foreach(var state in states)
+            
+            foreach (var state in states)
             {
                 m_states.Add(state.GetType(), state);
             }
@@ -22,9 +22,9 @@ namespace Infrastructure.States
         {
             m_state?.Update();
         }
-
-        public void ChangeState<T>()
-            where T: IState
+        
+        public void ChangedState<T>()
+            where T : IState
         {
             m_state?.Exit();
             {

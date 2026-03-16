@@ -1,7 +1,7 @@
 using System;
+using Entities;
 using UnityEngine;
 using UnityEngine.AI;
-using Entities;
 
 namespace Players
 {
@@ -10,14 +10,14 @@ namespace Players
     {
         public event Action Stopped;
         public event Action<Vector3> DestinationChanged;
-
+        
         [SerializeField] private NavMeshAgent m_agent;
 
         private float m_speed;
         private float m_acceleration;
-        private float m_angularSpeed;
+        private float m_andgularSpeed;
         private bool m_hasDestination;
-
+        
         private void OnValidate()
         {
             if (!m_agent)
@@ -27,11 +27,11 @@ namespace Players
         }
 
         private void Awake() =>
-            Initialize(m_speed, m_angularSpeed);
-
+            Initialize(m_speed, m_andgularSpeed);
+        
         private void Update()
         {
-            if(!m_hasDestination || m_agent.pathPending)
+            if (!m_hasDestination || m_agent.pathPending)
             {
                 return;
             }
@@ -41,8 +41,6 @@ namespace Players
                 if (!m_agent.hasPath || m_agent.velocity.sqrMagnitude <= 0.001f)
                 {
                     m_agent.isStopped = false;
-                    m_hasDestination = false;
-
                     Stopped?.Invoke();
                 }
             }
@@ -51,20 +49,19 @@ namespace Players
         public void Initialize(float speed, float angularSpeed)
         {
             m_speed = speed;
-            m_angularSpeed = angularSpeed;
-
+            m_andgularSpeed = angularSpeed;
+            
             m_agent.speed = speed;
             m_agent.angularSpeed = angularSpeed;
-
+            
             m_agent.updateRotation = false;
         }
-
+        
         public void IncreaseAcceleration(float delta)
         {
             if (delta < 0)
-            {
                 throw new ArgumentException("Delta cannot be negative", nameof(delta));
-            }
+            
             m_acceleration += delta;
             SetSpeed();
         }
@@ -72,32 +69,30 @@ namespace Players
         public void DecreaseAcceleration(float delta)
         {
             if (delta < 0)
-            {
                 throw new ArgumentException("Delta cannot be negative", nameof(delta));
-            }
+            
             m_acceleration -= delta;
             SetSpeed();
         }
-
+        
         public void SetDestination(Vector3 navMeshPoint)
         {
             m_agent.SetDestination(navMeshPoint);
-
             m_hasDestination = true;
-
+            
             DestinationChanged?.Invoke(navMeshPoint);
         }
 
         public void RotateTowards(Vector3 worldPoint)
         {
-            var direction = worldPoint - transform.position;
+            var direction =  worldPoint - transform.position;
             direction.y = 0;
 
             if (direction.sqrMagnitude < 0.0001f)
             {
                 return;
             }
-
+            
             var targetRotate = Quaternion.LookRotation(direction, Vector3.up);
             transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotate, m_agent.angularSpeed * Time.deltaTime);
         }
@@ -105,8 +100,9 @@ namespace Players
         private void SetSpeed()
         {
             var acceleration = m_acceleration > 0
-                ? m_acceleration 
-                : 1; 
+                ? m_acceleration
+                : 1;
+            
             m_agent.speed = m_speed * acceleration;
         }
     }

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 4f11d5211e90b3f4e969ea7701c02ce6
+timeCreated: 1508948566
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Demo/Missile Prefabs/Laser/LaserRedOBJ.prefab
+  uploadId: 757035

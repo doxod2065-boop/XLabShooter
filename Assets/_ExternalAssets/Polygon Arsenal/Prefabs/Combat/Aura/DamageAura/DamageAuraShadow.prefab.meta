@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 964822e28ffd1384ba31ad9aa10c95aa
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Prefabs/Combat/Aura/DamageAura/DamageAuraShadow.prefab
+  uploadId: 757035

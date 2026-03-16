@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: c77bb93e9c999a348b53412456e0f169
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Prefabs/Combat/Cleave/CleaveLife.prefab
+  uploadId: 757035

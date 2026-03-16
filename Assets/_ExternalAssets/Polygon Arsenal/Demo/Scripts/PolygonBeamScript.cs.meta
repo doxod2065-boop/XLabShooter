@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: b711c898ee9460946b5136e2c5cbfb93
+timeCreated: 1528645636
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Demo/Scripts/PolygonBeamScript.cs
+  uploadId: 757035

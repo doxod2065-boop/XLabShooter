@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: a5c122c2c792e7b42a8e5e4eaf91369d
+timeCreated: 1513540460
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Prefabs/Combat/Aura/SwirlAura/SwirlAuraYellow.prefab
+  uploadId: 757035

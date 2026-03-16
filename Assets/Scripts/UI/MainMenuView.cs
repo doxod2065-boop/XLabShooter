@@ -8,7 +8,7 @@ namespace UI
     {
         [SerializeField] private Button m_playButton;
         [SerializeField] private Button m_exitButton;
-
+        
         private Loading m_loading;
 
         private void Start()
@@ -36,12 +36,11 @@ namespace UI
 
         private void OnExitClick()
         {
-            Application.Quit();
 #if UNITY_EDITOR
             UnityEditor.EditorApplication.ExitPlaymode();
 #endif
+            
             Application.Quit();
-
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.UI;
 
 namespace Entities.Views
@@ -19,9 +19,7 @@ namespace Entities.Views
             m_healthComponent.ValueChanged -= SetValue;
         }
 
-        private void SetValue()
-        {
-            m_bar.fillAmount = ((float)m_healthComponent.value / (float)m_healthComponent.maxValue);
-        }
+        private void SetValue() =>
+            m_bar.fillAmount = ((float)m_healthComponent.value) / ((float)m_healthComponent.maxValue);
     }
 }

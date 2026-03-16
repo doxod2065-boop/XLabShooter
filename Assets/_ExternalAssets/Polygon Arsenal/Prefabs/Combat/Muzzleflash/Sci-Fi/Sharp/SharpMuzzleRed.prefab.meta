@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: a21b9a8351b8ed843b9fc93a78ac1737
+timeCreated: 1515426101
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Prefabs/Combat/Muzzleflash/Sci-Fi/Sharp/SharpMuzzleRed.prefab
+  uploadId: 757035

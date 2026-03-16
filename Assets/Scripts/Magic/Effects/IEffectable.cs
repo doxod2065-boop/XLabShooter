@@ -1,4 +1,4 @@
-﻿namespace Magic.Effects
+namespace Magic.Effects
 {
     public interface IEffectable { }
 }

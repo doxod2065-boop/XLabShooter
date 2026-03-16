@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: e9aec9d5f271aa846b14d6cf8c32df13
+timeCreated: 1534424263
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Prefabs/Combat/Death/DeathAcid.prefab
+  uploadId: 757035

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 805df24ef67e21246b19620d6e5c022f
+timeCreated: 1508948566
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Demo/Missile Prefabs/Grenade/GrenadeGreenOBJ.prefab
+  uploadId: 757035

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 6996f22f6b5a3ea4eab8535b2a399293
+timeCreated: 1514403070
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Prefabs/Combat/Aura/ChargeAura/AuraChargeBlue.prefab
+  uploadId: 757035

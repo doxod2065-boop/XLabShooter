@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 6339eb3dfc1da2f4283cdd807e1bc51d
+timeCreated: 1515517219
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Prefabs/Interactive/Powerups/Icons Holo/PowerIconHeart.prefab
+  uploadId: 757035

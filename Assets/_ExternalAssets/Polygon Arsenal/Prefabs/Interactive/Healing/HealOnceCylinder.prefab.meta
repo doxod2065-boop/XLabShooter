@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: bf6272e89c91e144e8071afe2d3792fe
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Prefabs/Interactive/Healing/HealOnceCylinder.prefab
+  uploadId: 757035

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 285feae93e48ad443a7caf58c8b27aad
+timeCreated: 1515378783
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Prefabs/Combat/Muzzleflash/Sci-Fi/Proton/ProtonMuzzleBlue.prefab
+  uploadId: 757035

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: dc372a689ab5a0b4c86a8caee680ab58
+timeCreated: 1515517141
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Prefabs/Interactive/Powerups/Icons Holo/PowerIconAmmoTriple.prefab
+  uploadId: 757035

@@ -1,12 +1,12 @@
-﻿using System;
+using System;
 
 namespace Entities.Enemies
 {
     public class EnemyStateMachine
     {
-        // previous and next states
+        // prevState and nextState
         public event Action<EnemyState, EnemyState> StateChanged;
-
+        
         public EnemyState currentState { get; private set; }
 
         public EnemyStateMachine()
@@ -20,10 +20,10 @@ namespace Entities.Enemies
             {
                 return;
             }
-
+            
             var previousState = currentState;
             currentState = nextState;
-
+            
             StateChanged?.Invoke(previousState, currentState);
         }
     }

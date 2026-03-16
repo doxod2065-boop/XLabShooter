@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 54bcf4ee4d511b34ca5b46d496dd83f8
+timeCreated: 1534340004
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Prefabs/Combat/Death/DeathFrost.prefab
+  uploadId: 757035

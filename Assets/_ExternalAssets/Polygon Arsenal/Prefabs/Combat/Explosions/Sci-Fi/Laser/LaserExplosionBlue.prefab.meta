@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 1b0498e8ad29f2546bc3dc0f8ab10c32
+timeCreated: 1509211181
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Prefabs/Combat/Explosions/Sci-Fi/Laser/LaserExplosionBlue.prefab
+  uploadId: 757035

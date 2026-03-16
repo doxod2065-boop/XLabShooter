@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: cc39a8fb80c84df448ed38464f7c1459
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Prefabs/Environment/Sparks/Explosion/SparkDirectionalSmall.prefab
+  uploadId: 757035

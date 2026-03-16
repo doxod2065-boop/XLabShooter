@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -14,13 +14,13 @@ namespace Entities.Enemies.Systems
         private Transform m_target;
         private bool m_isInitialized;
         private float m_acceleration;
-
+        
         private void OnValidate()
         {
             if (!m_agent)
             {
                 m_agent = GetComponent<NavMeshAgent>();
-            }   
+            }
         }
 
         public void Initialize(float speed, Transform target)
@@ -37,7 +37,7 @@ namespace Entities.Enemies.Systems
             {
                 return;
             }
-
+            
             m_agent.SetDestination(m_target.position);
         }
 
@@ -67,9 +67,8 @@ namespace Entities.Enemies.Systems
         public void IncreaseAcceleration(float delta)
         {
             if (delta < 0)
-            {
                 throw new ArgumentException("Delta cannot be negative", nameof(delta));
-            }
+            
             m_acceleration += delta;
             SetSpeed();
         }
@@ -77,18 +76,18 @@ namespace Entities.Enemies.Systems
         public void DecreaseAcceleration(float delta)
         {
             if (delta < 0)
-            {
                 throw new ArgumentException("Delta cannot be negative", nameof(delta));
-            }
+            
             m_acceleration -= delta;
             SetSpeed();
         }
-
+        
         private void SetSpeed()
         {
             var acceleration = m_acceleration > 0
                 ? m_acceleration
                 : 1;
+
             m_agent.speed = m_speed * acceleration;
         }
     }

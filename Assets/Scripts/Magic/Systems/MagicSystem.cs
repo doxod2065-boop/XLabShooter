@@ -1,27 +1,28 @@
-using Magic.Elements;
-using Players;
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
+using Inputs;
+using Magic.Data;
+using Magic.Elements;
 using Magic.Spells.Data;
+using UnityEngine;
 
 namespace Magic.Systems
 {
-    public class MagicSystem: MonoBehaviour
+    public class MagicSystem : MonoBehaviour
     {
+        public event Action SpellCancelled; 
         public event Action<MagicState> StateChanged;
-        public event Action SpellCancelled;
 
         public event Action<IReadOnlyList<ElementType>> ElementsChanged
         {
             add => spellPreparation.ElementsChanged += value;
             remove => spellPreparation.ElementsChanged -= value;
         }
-
+        
         [SerializeField] private MagicConfig m_config;
         [SerializeField] private MouseResolver m_mouseResolver;
-
+        
         private MagicState m_state;
         private SpellCaster m_caster;
         private Coroutine m_cooldownCoroutine;
@@ -48,14 +49,11 @@ namespace Magic.Systems
             m_caster = new SpellCaster(transform);
         }
 
-        private void OnEnable()
-        {
-            spellPreparation.OverflowOccured += CancelSpell;
-        }
-        private void OnDisable()
-        {
-            spellPreparation.OverflowOccured -= CancelSpell;
-        }
+        private void OnEnable() =>
+            spellPreparation.OverflowOccurred += CancelSpell;
+
+        private void OnDisable() =>
+            spellPreparation.OverflowOccurred -= CancelSpell;
 
         public void AddElement(ElementType element)
         {
@@ -63,7 +61,7 @@ namespace Magic.Systems
             {
                 return;
             }
-
+            
             spellPreparation.AddElement(element);
             state = MagicState.Preparation;
         }
@@ -74,13 +72,13 @@ namespace Magic.Systems
             {
                 return;
             }
-            
+
             if (spellPreparation.TryGetSpell(out var spell))
             {
                 state = MagicState.Casting;
-
-                m_caster.Cast(spell, m_mouseResolver.GetCursorWorldPosition() ?? Vector3.zero);
-
+                
+                m_caster.Cast(spell, m_mouseResolver.GetCursorWorldPosition().Value);
+                
                 spellPreparation.Clear();
                 state = MagicState.Idle;
             }
@@ -97,7 +95,7 @@ namespace Magic.Systems
                 spellPreparation.Clear();
                 SpellCancelled?.Invoke();
 
-                m_cooldownCoroutine = StartCoroutine(CooldownRoutine());
+                StartCooldown();
             }
         }
 
@@ -107,7 +105,7 @@ namespace Magic.Systems
             {
                 StopCoroutine(m_cooldownCoroutine);
             }
-
+            
             m_cooldownCoroutine = StartCoroutine(CooldownRoutine());
         }
 
@@ -119,13 +117,5 @@ namespace Magic.Systems
 
             m_cooldownCoroutine = null;
         }
-    }
-
-    public enum MagicState
-    {
-        Idle,
-        Preparation, 
-        Cooldown,
-        Casting
     }
 }

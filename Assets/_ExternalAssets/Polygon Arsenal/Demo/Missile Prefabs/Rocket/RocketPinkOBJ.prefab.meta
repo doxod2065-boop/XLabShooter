@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 99e7d0c647d14704f83badc7e4f42785
+timeCreated: 1508948566
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Demo/Missile Prefabs/Rocket/RocketPinkOBJ.prefab
+  uploadId: 757035

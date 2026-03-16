@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 77e5a1775927c864ea9b9c5c6f4e8e92
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Prefabs/Combat/Explosions/Magic/CritSpike/CritSpikeExplosionGreen.prefab
+  uploadId: 757035

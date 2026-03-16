@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: a7fced9761c2eab4f95f42a06d4638cc
+timeCreated: 1513457166
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Prefabs/Interactive/Zone/Simple/SimpleZonePink.prefab
+  uploadId: 757035

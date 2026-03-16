@@ -1,7 +1,8 @@
+using UnityEngine;
 using Magic.Effects;
 using System.Collections.Generic;
-using UnityEngine;
 using Magic.Effects.Extensions;
+using Players;
 
 namespace Magic.Spells.Projectiles
 {
@@ -9,7 +10,7 @@ namespace Magic.Spells.Projectiles
     public sealed class SpellProjectile : MonoBehaviour, ISpellProjectile
     {
         [SerializeField] private Rigidbody m_rigidbody;
-
+        
         private float m_speed;
         private bool m_initialized;
         private Vector3 m_direction;
@@ -17,7 +18,7 @@ namespace Magic.Spells.Projectiles
         private float m_targetDistance;
         private float m_traveledDistance;
         private IReadOnlyList<IEffect> m_effects;
-
+        
         private void OnValidate()
         {
             if (!m_rigidbody)
@@ -25,20 +26,19 @@ namespace Magic.Spells.Projectiles
                 m_rigidbody = GetComponent<Rigidbody>();
             }
         }
-
-        private void Start()
+        
+        private void Awake()
         {
             m_rigidbody.useGravity = false;
-
             m_rigidbody.collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
         }
-
+        
         private void FixedUpdate()
         {
             if (!m_initialized) return;
-
+            
             m_traveledDistance += m_speed * Time.fixedDeltaTime;
-
+            
             if (m_traveledDistance >= m_targetDistance)
             {
                 Destroy(gameObject);
@@ -48,13 +48,12 @@ namespace Magic.Spells.Projectiles
                 SetLinearVelocity();
             }
         }
-
+        
         private void OnTriggerEnter(Collider other)
         {
             if (!m_initialized) return;
-
+            
             m_effects.ApplyEffects(other.GetComponents<IEffectable>());
-
             Destroy(gameObject);
         }
 
@@ -62,49 +61,24 @@ namespace Magic.Spells.Projectiles
         {
             m_targetPosition = targetPosition;
             m_targetPosition.y = transform.position.y;
-
+            
             m_speed = speed;
             m_effects = effects;
-
+            
             m_direction = (m_targetPosition - transform.position).normalized;
-
+            
             m_traveledDistance = 0f;
             m_targetDistance = Vector3.Distance(transform.position, m_targetPosition);
-
-            if (m_direction !=  Vector3.zero)
+            
+            if (m_direction != Vector3.zero)
                 transform.rotation = Quaternion.LookRotation(m_direction);
-
+                
             m_initialized = true;
-
+            
             SetLinearVelocity();
         }
-
-        private void ApplyEffects(IEffectable target)
-        {
-            if (m_effects is null) return;
-
-            foreach (var effect in m_effects)
-            {
-                effect?.Apply(target);
-            }
-        }
-
-        private void ApplyEffects(IReadOnlyCollection<IEffectable> effectables)
-        {
-            // m_effects.ApplyEffects(effectables);
-
-            if (m_effects is null) return;
-
-            foreach (var effect in m_effects)
-            {
-                foreach (var effectable in effectables)
-                {
-                    effect?.Apply(effectable);
-                }
-            }
-        }
-
-        private void SetLinearVelocity() => 
+        
+        private void SetLinearVelocity() =>
             m_rigidbody.linearVelocity = m_direction * m_speed;
     }
 }

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using UnityEngine;
 
 namespace Magic.Buffs.Base
@@ -11,11 +11,11 @@ namespace Magic.Buffs.Base
         public float duration => m_duration;
 
         [field: NonSerialized]
-        public float timer { get; private set; } 
-
+        public float timer { get; private set; }
+        
         public TimedBuff() { }
-
-        protected TimedBuff(string id, Sprite icon, BuffType type, float duration)
+        
+        protected TimedBuff(string id, Sprite icon, BuffType type, float duration) 
             : base(id, icon, type)
         {
             m_duration = duration;
@@ -42,7 +42,7 @@ namespace Magic.Buffs.Base
                 Deinitialize();
             }
         }
-
+        
         protected virtual void OnUpdated(float deltaTime) { }
     }
 }

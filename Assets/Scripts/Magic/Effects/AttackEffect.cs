@@ -1,5 +1,5 @@
-using Entities;
 using System;
+using Entities;
 using UnityEngine;
 
 namespace Magic.Effects
@@ -7,8 +7,8 @@ namespace Magic.Effects
     [Serializable]
     public class AttackEffect : IEffect
     {
-        [SerializeField][Min(0)] private float m_damage;
-
+        [SerializeField] [Min(0)] private float m_damage;
+        
         public void Apply(IEffectable effectable)
         {
             if (effectable is IHealth health)

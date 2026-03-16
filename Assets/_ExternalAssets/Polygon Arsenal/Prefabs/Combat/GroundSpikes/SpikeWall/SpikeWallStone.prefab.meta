@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 9c37601c3b7eff24a87ea6cf21e3c3fd
+timeCreated: 1516576788
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Prefabs/Combat/GroundSpikes/SpikeWall/SpikeWallStone.prefab
+  uploadId: 757035

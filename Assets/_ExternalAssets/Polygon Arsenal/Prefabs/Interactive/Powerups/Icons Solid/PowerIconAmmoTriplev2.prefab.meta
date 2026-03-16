@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: c10c0ac18e8242a4cbc20bc5c0ca420c
+timeCreated: 1515517141
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Prefabs/Interactive/Powerups/Icons Solid/PowerIconAmmoTriplev2.prefab
+  uploadId: 757035

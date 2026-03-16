@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: ccc475ffd0fb2394aa28a45c656d50c6
+timeCreated: 1513822290
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Prefabs/Environment/Fire/Big/FireBigYellow.prefab
+  uploadId: 757035

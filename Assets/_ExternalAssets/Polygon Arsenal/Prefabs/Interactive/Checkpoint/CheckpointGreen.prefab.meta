@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 443ec6349a0eaff478fdba2a5573a1df
+timeCreated: 1512593919
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Prefabs/Interactive/Checkpoint/CheckpointGreen.prefab
+  uploadId: 757035

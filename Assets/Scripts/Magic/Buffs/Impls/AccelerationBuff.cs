@@ -1,17 +1,17 @@
-﻿using Entities;
-using Magic.Buffs.Base;
 using System;
+using Entities;
+using Magic.Buffs.Base;
 using UnityEngine;
 
 namespace Magic.Buffs.Impls
-{ 
+{
     [Serializable]
     public class AccelerationBuff : TimedBuff
     {
         [SerializeField] private float m_value;
 
         private IAcceleration m_acceleration;
-
+        
         public AccelerationBuff(
             string id,
             Sprite icon,
@@ -37,7 +37,7 @@ namespace Magic.Buffs.Impls
                 m_acceleration.IncreaseAcceleration(m_value);
             }
         }
-
+        
         protected override void OnDeinitializing()
         {
             m_acceleration?.DecreaseAcceleration(m_value);
@@ -45,6 +45,6 @@ namespace Magic.Buffs.Impls
         }
 
         public override IBuff Clone() =>
-            new AccelerationBuff(id, icon, type, duration, m_value);
+            new AccelerationBuff(Id, Icon, Type, duration, m_value);
     }
 }

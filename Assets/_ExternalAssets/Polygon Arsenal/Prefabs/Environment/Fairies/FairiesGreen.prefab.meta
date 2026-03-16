@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 63de004af047fd34d914e25a866003c4
+timeCreated: 1511985411
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Prefabs/Environment/Fairies/FairiesGreen.prefab
+  uploadId: 757035

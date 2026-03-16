@@ -1,6 +1,5 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using UnityEngine;
 
 namespace Infrastructure
 {
@@ -9,7 +8,7 @@ namespace Infrastructure
         private static ServiceLocator m_serviceLocator;
         
         private Dictionary<Type, object> m_services = new();
-
+        
         public static void Register<T>(T instance)
             where T : class
         {
@@ -20,17 +19,13 @@ namespace Infrastructure
         public static T Resolve<T>()
             where T : class
         {
-            if (m_serviceLocator == null)
-            {
-                throw new NullReferenceException("ServiceLocator is null");
-            }
+            if (m_serviceLocator is null)
+                throw new NullReferenceException("Service locator is null");
 
             return m_serviceLocator.m_services[typeof(T)] as T;
         }
 
-        public static void Clear()
-        {
+        public static void Clear() =>
             m_serviceLocator?.m_services.Clear();
-        }
     }
 }

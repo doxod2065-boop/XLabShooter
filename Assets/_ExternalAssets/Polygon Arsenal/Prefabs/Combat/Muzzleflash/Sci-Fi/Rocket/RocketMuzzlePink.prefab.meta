@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: fb12137f7d6aca245a61dc5b55d6131d
+timeCreated: 1515082764
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Prefabs/Combat/Muzzleflash/Sci-Fi/Rocket/RocketMuzzlePink.prefab
+  uploadId: 757035

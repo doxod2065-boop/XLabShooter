@@ -1,5 +1,5 @@
-﻿using Magic.Effects;
 using System;
+using Magic.Effects;
 using UnityEngine;
 
 namespace Entities
@@ -11,17 +11,17 @@ namespace Entities
 
         private float m_value;
         private bool m_initialized;
-
+        
         public float value
         {
             get => m_value;
-            set
+            private set
             {
                 if (Mathf.Approximately(m_value, value))
                 {
                     return;
                 }
-
+                
                 m_value = value < 0 ? 0 : value;
                 ValueChanged?.Invoke();
 
@@ -31,38 +31,34 @@ namespace Entities
                 }
             }
         }
-
-        public float maxValue { get; private set; }
+        
+        public float maxValue { get; private set;  }
 
         public void Initialize(float value)
         {
             if (m_initialized)
             {
-                throw new InvalidOperationException("Health component is already initialized");
+                throw new InvalidOperationException("HealthComponent is already initialized");
             }
-
-            this.value = value;
+            
             maxValue = value;
+            this.value = value;
             m_initialized = true;
         }
-
+        
         public void Heal(float heal)
         {
             if (heal < 0)
-            {
-                throw new ArgumentOutOfRangeException(nameof(heal), heal, "Heal can not be negative");
-            }
-
+                throw new ArgumentOutOfRangeException(nameof(heal), heal, "Heal cannot be negative");
+            
             value += heal;
         }
 
         public void TakeDamage(float damage)
         {
             if (damage < 0)
-            {
-                throw new ArgumentOutOfRangeException(nameof(damage), damage, "Damage can not be negative");
-            }
-
+                throw new ArgumentOutOfRangeException(nameof(damage), damage, "Heal cannot be negative");
+            
             value -= damage;
         }
     }

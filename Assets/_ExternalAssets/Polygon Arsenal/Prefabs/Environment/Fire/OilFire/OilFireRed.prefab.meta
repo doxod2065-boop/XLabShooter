@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 5cfcdecc1ed46cc4fa2038374a8ee71e
+timeCreated: 1511797487
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Prefabs/Environment/Fire/OilFire/OilFireRed.prefab
+  uploadId: 757035

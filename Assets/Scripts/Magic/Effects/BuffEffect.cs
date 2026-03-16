@@ -1,5 +1,5 @@
-﻿using Magic.Buffs;
 using System;
+using Magic.Buffs;
 using UnityEngine;
 
 namespace Magic.Effects
@@ -9,7 +9,7 @@ namespace Magic.Effects
     {
         [SerializeReferenceDropdown]
         [SerializeReference] private IBuff[] m_buffs;
-
+        
         public void Apply(IEffectable effectable)
         {
             if (effectable is BuffContainer container)

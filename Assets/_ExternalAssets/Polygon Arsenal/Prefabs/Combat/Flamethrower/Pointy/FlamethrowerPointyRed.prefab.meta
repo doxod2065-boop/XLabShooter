@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 2647c876e69a1444bbbfbbb302e34c60
+timeCreated: 1514399602
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Prefabs/Combat/Flamethrower/Pointy/FlamethrowerPointyRed.prefab
+  uploadId: 757035

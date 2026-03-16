@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace Magic.Effects.Extensions
 {
@@ -9,19 +9,19 @@ namespace Magic.Effects.Extensions
             IEffectable effectable)
         {
             if (effects is null) return;
-
+            
             foreach (var effect in effects)
             {
                 effect?.Apply(effectable);
             }
         }
-
+        
         public static void ApplyEffects(
             this IReadOnlyCollection<IEffect> effects,
             IReadOnlyCollection<IEffectable> effectables)
         {
             if (effects is null) return;
-
+            
             foreach (var effect in effects)
             {
                 foreach (var effectable in effectables)

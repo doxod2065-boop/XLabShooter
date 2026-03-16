@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: ed0976c66c20053438f239c30628297f
+timeCreated: 1514994259
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Prefabs/Combat/Muzzleflash/Sci-Fi/Antimatter/AntimatterMuzzleGreen.prefab
+  uploadId: 757035

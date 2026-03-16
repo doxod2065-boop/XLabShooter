@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c102ed95f8000954b97afe4efd1bc7ac
+timeCreated: 1508520462
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Demo/Scenes/Combat/PolyAura4.unity
+  uploadId: 757035

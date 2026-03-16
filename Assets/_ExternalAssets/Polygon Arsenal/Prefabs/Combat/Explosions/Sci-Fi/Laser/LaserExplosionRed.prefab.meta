@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 4b045bc3ddc5c4343bd3b501856e50f8
+timeCreated: 1514504818
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Prefabs/Combat/Explosions/Sci-Fi/Laser/LaserExplosionRed.prefab
+  uploadId: 757035

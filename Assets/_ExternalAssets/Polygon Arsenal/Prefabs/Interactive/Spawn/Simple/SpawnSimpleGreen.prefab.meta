@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: b81cf2ec5e242c84cb06aa01043f32ca
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Prefabs/Interactive/Spawn/Simple/SpawnSimpleGreen.prefab
+  uploadId: 757035

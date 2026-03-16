@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 7f1a043acbf95ab47ae2e96ee0c834f2
+timeCreated: 1515439112
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Prefabs/Combat/Missiles/Magic/Fireball/FireballPink.prefab
+  uploadId: 757035

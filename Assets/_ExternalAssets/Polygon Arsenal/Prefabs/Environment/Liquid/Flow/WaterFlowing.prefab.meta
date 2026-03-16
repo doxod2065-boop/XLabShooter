@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 37c1f41cfe9bd50439003d0883c22963
+timeCreated: 1515436979
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Prefabs/Environment/Liquid/Flow/WaterFlowing.prefab
+  uploadId: 757035

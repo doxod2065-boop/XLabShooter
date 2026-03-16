@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: a77eb0eb82e2e8c43b4dbb59c98923a6
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Demo/Demo Prefabs/GUI/CanvasSceneSelectCom.prefab
+  uploadId: 757035

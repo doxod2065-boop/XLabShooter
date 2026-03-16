@@ -1,8 +1,8 @@
-﻿using Magic.Buffs.Extensions;
-using Magic.Effects;
 using System;
-using System.Collections.Generic;
 using UnityEngine;
+using Magic.Effects;
+using Magic.Buffs.Extensions;
+using System.Collections.Generic;
 
 namespace Magic.Buffs
 {
@@ -10,31 +10,31 @@ namespace Magic.Buffs
     {
         public event Action<IBuff> BuffAdded;
         public event Action<IBuff> BuffRemoved;
-
+        
         private HashSet<string> m_ids = new();
-        private Dictionary<string, IBuff> m_buffs = new();
-
+        private Dictionary<string, IBuff>  m_buffs = new();
+        
         public IReadOnlyCollection<IBuff> Buffs => m_buffs.Values;
 
         public void Add(IBuff buff)
         {
-            if (m_buffs.TryGetValue(buff.id, out IBuff existingBuff))
+            if (m_buffs.TryGetValue(buff.Id, out IBuff existingBuff))
             {
                 existingBuff.Refresh(this);
-                m_ids.Remove(existingBuff.id);
+                m_ids.Remove(existingBuff.Id);
             }
             else
             {
-                m_buffs.Add(buff.id, buff);
+                m_buffs.Add(buff.Id, buff);
                 buff.Initialize(this);
-
+                                
                 BuffAdded?.Invoke(buff);
             }
         }
 
         public void Remove(IBuff buff)
         {
-            m_ids.Add(buff.id);
+            m_ids.Add(buff.Id);
         }
 
         public void Update()
@@ -42,16 +42,16 @@ namespace Magic.Buffs
             foreach (var buff in m_buffs.Values)
             {
                 buff.Update(Time.deltaTime);
-            } 
+            }
 
             foreach (var id in m_ids)
             {
                 var buff = m_buffs[id];
-
+                
                 m_buffs.Remove(id);
-                BuffRemoved(buff);
+                BuffRemoved?.Invoke(buff);
             }
-
+            
             m_ids.Clear();
         }
     }

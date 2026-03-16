@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: ed5cf93a13398654580d9fe042b1acf8
+timeCreated: 1512593024
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Prefabs/Interactive/BeamUp/Cylinder/BeamupCylinderYellow.prefab
+  uploadId: 757035

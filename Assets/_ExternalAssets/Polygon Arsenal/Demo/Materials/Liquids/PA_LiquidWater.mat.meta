@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ee74053068d095446b74a01c612037e1
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Demo/Materials/Liquids/PA_LiquidWater.mat
+  uploadId: 757035

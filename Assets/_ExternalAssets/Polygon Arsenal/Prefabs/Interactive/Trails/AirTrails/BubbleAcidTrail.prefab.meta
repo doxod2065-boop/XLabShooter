@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 61bf5688846f81146b27e362ea0d72f2
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Prefabs/Interactive/Trails/AirTrails/BubbleAcidTrail.prefab
+  uploadId: 757035

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: f6127e60c7f0d8d488cc5a7177ef4ac8
+timeCreated: 1514401961
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Prefabs/Combat/GroundSlam/GroundSlamBlue.prefab
+  uploadId: 757035

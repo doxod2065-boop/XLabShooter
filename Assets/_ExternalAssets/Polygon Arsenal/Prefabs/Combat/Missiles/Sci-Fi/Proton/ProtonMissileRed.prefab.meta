@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: a9b9bcec95bb11e45baa21df41d2b475
+timeCreated: 1514822198
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Prefabs/Combat/Missiles/Sci-Fi/Proton/ProtonMissileRed.prefab
+  uploadId: 757035

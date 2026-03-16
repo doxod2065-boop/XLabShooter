@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 978b89b9ada2d7a4386e22fc2aa7342b
+timeCreated: 1515542342
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Sound/Prefabs/Explosions/PolyPlasmaExplosionSND.prefab
+  uploadId: 757035

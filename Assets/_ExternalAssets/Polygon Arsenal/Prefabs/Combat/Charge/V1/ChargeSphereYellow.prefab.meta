@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 0f34c3867eda46f4eae90ca321cd56a0
+timeCreated: 1514401157
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Prefabs/Combat/Charge/V1/ChargeSphereYellow.prefab
+  uploadId: 757035

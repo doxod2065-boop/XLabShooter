@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: b119a63faa4d7084381b7c6827b703e8
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Prefabs/Combat/Aura/ElementalAura/ElementalAuraHoly.prefab
+  uploadId: 757035

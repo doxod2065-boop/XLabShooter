@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: b0e9cea208e1bf24ba3f4f58e926bced
+timeCreated: 1514484565
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Prefabs/Combat/Nova/EnergyNova/EnergyNovaPink.prefab
+  uploadId: 757035

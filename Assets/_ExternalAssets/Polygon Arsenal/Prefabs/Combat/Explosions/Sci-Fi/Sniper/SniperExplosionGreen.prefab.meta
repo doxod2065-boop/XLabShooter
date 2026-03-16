@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: c95980c131f72bd44a0cc00d4f04373f
+timeCreated: 1514519882
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Prefabs/Combat/Explosions/Sci-Fi/Sniper/SniperExplosionGreen.prefab
+  uploadId: 757035

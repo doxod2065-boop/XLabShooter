@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: cc5f825b215bff34182df7efd38917ae
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Prefabs/Combat/Curses & Debuffs/Debuffs/BlindDebuff.prefab
+  uploadId: 757035

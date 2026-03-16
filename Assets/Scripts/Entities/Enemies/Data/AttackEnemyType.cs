@@ -1,8 +1,8 @@
-﻿namespace Entities.Enemies.Data
+namespace Entities.Enemies.Data
 {
     public enum AttackEnemyType
     {
         Range,
-        Melee
+        Melee,
     }
 }

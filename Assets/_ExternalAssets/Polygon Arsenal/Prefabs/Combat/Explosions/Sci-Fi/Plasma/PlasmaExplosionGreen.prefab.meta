@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: bd2986e0347b6d344b8b62ff24b04818
+timeCreated: 1514601212
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Prefabs/Combat/Explosions/Sci-Fi/Plasma/PlasmaExplosionGreen.prefab
+  uploadId: 757035

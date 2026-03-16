@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 1fe830c04cfd02f4e9bf2eebdf6e1d62
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Prefabs/Combat/Aura/ElementalAura/ElementalAuraLife.prefab
+  uploadId: 757035

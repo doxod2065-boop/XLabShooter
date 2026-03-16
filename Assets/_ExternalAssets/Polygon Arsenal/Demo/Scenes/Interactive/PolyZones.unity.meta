@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 6958e1d431588d24b8e59478dc77824f
+timeCreated: 1508520462
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Demo/Scenes/Interactive/PolyZones.unity
+  uploadId: 757035

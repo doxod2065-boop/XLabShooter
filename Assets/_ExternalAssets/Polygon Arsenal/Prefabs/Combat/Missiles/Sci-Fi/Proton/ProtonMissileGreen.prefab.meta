@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 86c13c6a4d1da084da2631d4ea3d104c
+timeCreated: 1512396717
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Prefabs/Combat/Missiles/Sci-Fi/Proton/ProtonMissileGreen.prefab
+  uploadId: 757035

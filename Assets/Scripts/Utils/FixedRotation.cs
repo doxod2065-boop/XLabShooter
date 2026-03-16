@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace Utils
@@ -11,7 +12,7 @@ namespace Utils
         private void Start()
         {
             m_parent = transform.parent;
-
+            
             m_rotation = transform.rotation;
             m_worldOffset = transform.position - m_parent.position;
         }
@@ -22,10 +23,9 @@ namespace Utils
             {
                 return;
             }
-
+            
             transform.position = m_parent.position + m_worldOffset;
             transform.rotation = m_rotation;
         }
     }
 }
-

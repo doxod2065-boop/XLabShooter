@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 3706080ee5f0d0946bb67bf29e88f82d
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Prefabs/Combat/Chains/ChainTarget/ChainTargetWater.prefab
+  uploadId: 757035

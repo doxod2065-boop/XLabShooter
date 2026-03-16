@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 493a5a39c7e7fd841a36a28a0a780207
+timeCreated: 1514827826
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Prefabs/Combat/Missiles/Sci-Fi/Sniper/SniperBulletBlue.prefab
+  uploadId: 757035

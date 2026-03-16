@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 0361e13794d49e14f8991ead81d61102
+timeCreated: 1508948566
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Demo/Missile Prefabs/Arrow/ArrowMissileBlueOBJ.prefab
+  uploadId: 757035

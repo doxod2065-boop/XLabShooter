@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 61ffeb537aaaba643a5a53f738e40de8
+timeCreated: 1515542342
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Sound/Prefabs/Missile/PolyCrystalMissileSND.prefab
+  uploadId: 757035

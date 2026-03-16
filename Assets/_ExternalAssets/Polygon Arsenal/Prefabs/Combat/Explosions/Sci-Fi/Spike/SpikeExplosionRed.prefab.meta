@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: f04d09c5c0acf824b87a8fc15767b2ab
+timeCreated: 1514655735
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Prefabs/Combat/Explosions/Sci-Fi/Spike/SpikeExplosionRed.prefab
+  uploadId: 757035

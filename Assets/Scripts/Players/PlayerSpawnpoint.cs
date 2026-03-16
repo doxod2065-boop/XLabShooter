@@ -1,9 +1,6 @@
-﻿using UnityEngine;
+using UnityEngine;
 
 namespace Players
 {
-    public sealed class PlayerSpawnPoint : MonoBehaviour
-    {
-
-    }
+    public sealed class PlayerSpawnPoint : MonoBehaviour { }
 }

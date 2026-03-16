@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: d35b96727fd4ed34d9f71bc91f61f7fd
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Prefabs/Combat/Missiles/Magic/Bone/BoneMissile.prefab
+  uploadId: 757035

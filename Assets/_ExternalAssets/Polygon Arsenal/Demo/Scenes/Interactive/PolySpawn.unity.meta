@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: cd3c82bfaeb12b14399dbc454f42c1c6
+timeCreated: 1508520462
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Demo/Scenes/Interactive/PolySpawn.unity
+  uploadId: 757035

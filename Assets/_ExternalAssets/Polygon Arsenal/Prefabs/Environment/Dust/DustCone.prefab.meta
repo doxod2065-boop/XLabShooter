@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: f7645e0eacce87b40b5b7f390646dcf7
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Prefabs/Environment/Dust/DustCone.prefab
+  uploadId: 757035

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 831dca8d6f3415849bb76e2d34c30725
+timeCreated: 1515542342
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Sound/Prefabs/Missile/PolyNatureMissileSND.prefab
+  uploadId: 757035

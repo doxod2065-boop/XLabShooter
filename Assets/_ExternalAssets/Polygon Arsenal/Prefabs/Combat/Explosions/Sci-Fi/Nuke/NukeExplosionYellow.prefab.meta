@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 82c794b0aa90a954faf2cc36c92f8c9e
+timeCreated: 1514667016
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Prefabs/Combat/Explosions/Sci-Fi/Nuke/NukeExplosionYellow.prefab
+  uploadId: 757035

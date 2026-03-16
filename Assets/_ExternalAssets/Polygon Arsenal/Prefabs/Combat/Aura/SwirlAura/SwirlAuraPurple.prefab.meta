@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 4e0c5d2458eb7ad4f8b879d0d74f3754
+timeCreated: 1513540410
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Prefabs/Combat/Aura/SwirlAura/SwirlAuraPurple.prefab
+  uploadId: 757035

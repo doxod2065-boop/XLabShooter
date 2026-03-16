@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: b70cda7923b133842961e4489f089c9e
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Prefabs/Environment/Dust/DustLightSource.prefab
+  uploadId: 757035

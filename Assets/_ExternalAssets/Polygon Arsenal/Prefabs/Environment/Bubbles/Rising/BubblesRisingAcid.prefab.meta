@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 96b91aaa60694e543b17aaf3f31b17dd
+timeCreated: 1509906643
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Prefabs/Environment/Bubbles/Rising/BubblesRisingAcid.prefab
+  uploadId: 757035

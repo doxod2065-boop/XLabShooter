@@ -1,6 +1,8 @@
 using Entities;
 using Infrastructure;
+using Inputs;
 using Magic.Systems;
+using UnityEditor.Build.Content;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -9,20 +11,19 @@ namespace Players
     [RequireComponent(typeof(PlayerMovement))]
     public class PlayerController : MonoBehaviour
     {
-        [SerializeField] private HealthComponent m_health;
         [SerializeField] private PlayerConfig m_config;
+        [SerializeField] private HealthComponent m_health;
         [SerializeField] private PlayerMovement m_playerMovement;
-
+        
         [SerializeField] private MagicInputHelper m_magicInputHelper;
 
         private MouseResolver m_mouseResolver;
-
         private PlayerRotationCalculator m_playerRotationCalculator;
 
-        public PlayerConfig config => m_config;
-
-        public HealthComponent health => m_health;
-
+        public PlayerConfig Config => m_config;
+        
+        public HealthComponent Health => m_health;
+        
         private void OnValidate()
         {
             if (!m_playerMovement)
@@ -32,17 +33,15 @@ namespace Players
         }
 
         public void Initialize(
-            Camera camera,
+            Camera camera, 
             MouseResolver mouseResolver)
         {
             m_mouseResolver = mouseResolver;
-
-            m_mouseResolver = ServiceLocator.Resolve<MouseResolver>();
-
-            m_health.Initialize(m_config.hp);
+            
+            m_health.Initialize(m_config.Hp);
             m_playerMovement.Initialize(m_config.speed, m_config.angularSpeed);
             m_playerRotationCalculator = new PlayerRotationCalculator(camera, transform);
-
+            
             SetupCursor();
         }
 
@@ -51,7 +50,7 @@ namespace Players
             Vector3 mousePosition = Mouse.current.position.ReadValue();
             var lookPoint = m_playerRotationCalculator.Calculate(mousePosition);
             m_playerMovement.RotateTowards(lookPoint);
-
+            
             if (Mouse.current.rightButton.wasPressedThisFrame)
             {
                 Vector3? navPoint = m_mouseResolver.GetNavMeshPoint();
@@ -61,7 +60,7 @@ namespace Players
                     m_playerMovement.SetDestination(navPoint.Value);
                 }
             }
-
+            
             m_magicInputHelper.Update();
         }
 

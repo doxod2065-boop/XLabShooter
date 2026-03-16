@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: d058ef061288a094198612299a9744ad
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Prefabs/Combat/Aura/ShieldAura/ShieldDefenseBlue.prefab
+  uploadId: 757035

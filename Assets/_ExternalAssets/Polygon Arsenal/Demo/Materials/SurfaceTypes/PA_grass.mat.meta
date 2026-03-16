@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 930d9b11e326b0d4d859590a83e467ad
+timeCreated: 1516036597
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Demo/Materials/SurfaceTypes/PA_grass.mat
+  uploadId: 757035

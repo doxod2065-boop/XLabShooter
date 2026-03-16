@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 627bab77b68c10a44a5f28f76e61c028
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Prefabs/Interactive/Trails/AirTrails/LightningBlueTrail.prefab
+  uploadId: 757035

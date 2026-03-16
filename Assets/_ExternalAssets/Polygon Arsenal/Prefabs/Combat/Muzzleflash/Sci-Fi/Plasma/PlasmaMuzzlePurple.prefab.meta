@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: b614eaff6e5c7324a815419630c573fe
+timeCreated: 1515103094
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Prefabs/Combat/Muzzleflash/Sci-Fi/Plasma/PlasmaMuzzlePurple.prefab
+  uploadId: 757035

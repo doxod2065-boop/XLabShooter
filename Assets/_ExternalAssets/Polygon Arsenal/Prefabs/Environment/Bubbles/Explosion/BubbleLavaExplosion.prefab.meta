@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 669ff18b1826fa74991797b52ff7c149
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Prefabs/Environment/Bubbles/Explosion/BubbleLavaExplosion.prefab
+  uploadId: 757035

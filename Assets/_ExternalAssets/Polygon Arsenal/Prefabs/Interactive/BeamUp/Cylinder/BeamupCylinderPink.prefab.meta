@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 2a51fc0674f272d4c8f6cf623c2a6bcd
+timeCreated: 1512593095
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 109286
+  packageName: Polygon Arsenal
+  packageVersion: 2.07
+  assetPath: Assets/Polygon Arsenal/Prefabs/Interactive/BeamUp/Cylinder/BeamupCylinderPink.prefab
+  uploadId: 757035
