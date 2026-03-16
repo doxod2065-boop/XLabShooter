@@ -96,7 +96,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!136 &997753272890520406
 CapsuleCollider:
@@ -281,7 +280,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8566436171900128693, guid: daf02e323f1e2fe4ca0ac7b8ce26f197, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.51
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8566436171900128693, guid: daf02e323f1e2fe4ca0ac7b8ce26f197, type: 3}
       propertyPath: m_LocalRotation.w

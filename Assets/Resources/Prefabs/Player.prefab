@@ -120,7 +120,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!136 &1194452070895403066
 CapsuleCollider:
@@ -173,7 +172,6 @@ MonoBehaviour:
   m_config: {fileID: 11400000, guid: 906cf91de9429fd4f988c28159b05361, type: 2}
   m_health: {fileID: 8864229818704404032}
   m_playerMovement: {fileID: 9029773898639263411}
-  mMouseResolver: {fileID: 0}
   m_magicInputHelper:
     m_magicSystem: {fileID: 8830676854873502689}
     m_element1Key: 31
@@ -193,7 +191,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Magic.Systems.MagicSystem
   m_config: {fileID: 11400000, guid: 170752ab7da9ba94cae69c002ab82124, type: 2}
-  m_mouseResolver: {fileID: 0}
 --- !u!114 &8864229818704404032
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -399,7 +396,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 629ef7570134c6a418a3d46dba66dd54, type: 2}
+  - {fileID: 2100000, guid: f6c12ffe375aaf14da48084582b4450d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -421,7 +418,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &8157286893125963137
 GameObject:
