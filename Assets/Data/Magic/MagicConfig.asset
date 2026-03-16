@@ -15,4 +15,4 @@ MonoBehaviour:
   m_elementsData: {fileID: 11400000, guid: 5790da2a5bf39a14691fd0156b35f364, type: 2}
   m_spellsDataBase: {fileID: 11400000, guid: 7c837b91f31ed1b44b46cea3fec16f91, type: 2}
   m_maxElements: 3
-  m_cancelCooldown: 1.5
+  m_cancelCooldown: 1.4

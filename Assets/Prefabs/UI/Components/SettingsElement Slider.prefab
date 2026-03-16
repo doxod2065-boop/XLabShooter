@@ -289,7 +289,6 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
-  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -534,7 +533,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2237185206108760752, guid: 79ca8cebe6a45974da04f5ab66b4f522, type: 3}
       propertyPath: m_Name
-      value: SettingsElement Slider Variant
+      value: SettingsElement Slider
       objectReference: {fileID: 0}
     - target: {fileID: 5287347053399011905, guid: 79ca8cebe6a45974da04f5ab66b4f522, type: 3}
       propertyPath: m_Pivot.x
